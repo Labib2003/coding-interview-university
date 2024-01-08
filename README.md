@@ -573,13 +573,21 @@ But don't forget to do coding problems from above while you learn!
 - [x] [Big O Notations (general quick tutorial) (video)](https://www.youtube.com/watch?v=V6mKVRU1evU) `5.1.24`
 - [x] [Big O Notation (and Omega and Theta) - best mathematical explanation (video)](https://www.youtube.com/watch?v=ei-A_wy5Yxw&index=2&list=PL1BaGV1cIH4UhkL8a9bJGG356covJ76qN) `5.1.24`
 - [x] [Skiena (video)](https://www.youtube.com/watch?v=z1mkCe3kVUA) `6.1.24`
-- [ ] [UC Berkeley Big O (video)](https://archive.org/details/ucberkeley_webcast_VIS4YDpuP98)
+- [x] [UC Berkeley Big O (video)](https://archive.org/details/ucberkeley_webcast_VIS4YDpuP98) `9.1.24`
 - [ ] [Amortized Analysis (video)](https://www.youtube.com/watch?v=B3SpQZaAZP4&index=10&list=PL1BaGV1cIH4UhkL8a9bJGG356covJ76qN)
 - [ ] TopCoder (includes recurrence relations and master theorem):
   - [Computational Complexity: Section 1](https://www.topcoder.com/thrive/articles/Computational%20Complexity%20part%20one)
   - [Computational Complexity: Section 2](https://www.topcoder.com/thrive/articles/Computational%20Complexity%20part%20two)
 - [ ] [Cheat sheet](http://bigocheatsheet.com/)
 - [ ] [[Review] Big-O notation in 5 minutes (video)](https://youtu.be/__vX2sjlpXU)
+
+```markdown
+Big O notation is a mathematical notation to express how an algorithm scales as the input size grows regardless of the machine. (There are some mathmatical proofs and visualizations with graphs).
+
+There are two other notations, Omega and Teta.
+
+Big O represents the upper-bound. Big Omega represents the lower bound. And if both O and Omega are the same function (the constants can be different), it can be called Theta notation or the tight bound of the function.
+```
 
 Well, that's about enough of that.
 
