@@ -574,12 +574,12 @@ But don't forget to do coding problems from above while you learn!
 - [x] [Big O Notation (and Omega and Theta) - best mathematical explanation (video)](https://www.youtube.com/watch?v=ei-A_wy5Yxw&index=2&list=PL1BaGV1cIH4UhkL8a9bJGG356covJ76qN) `5.1.24`
 - [x] [Skiena (video)](https://www.youtube.com/watch?v=z1mkCe3kVUA) `6.1.24`
 - [x] [UC Berkeley Big O (video)](https://archive.org/details/ucberkeley_webcast_VIS4YDpuP98) `9.1.24`
-- [ ] [Amortized Analysis (video)](https://www.youtube.com/watch?v=B3SpQZaAZP4&index=10&list=PL1BaGV1cIH4UhkL8a9bJGG356covJ76qN)
-- [ ] TopCoder (includes recurrence relations and master theorem):
+- [x] [Amortized Analysis (video)](https://www.youtube.com/watch?v=B3SpQZaAZP4&index=10&list=PL1BaGV1cIH4UhkL8a9bJGG356covJ76qN) `9.1.24`
+- [x] TopCoder (includes recurrence relations and master theorem): `9.1.24`
   - [Computational Complexity: Section 1](https://www.topcoder.com/thrive/articles/Computational%20Complexity%20part%20one)
   - [Computational Complexity: Section 2](https://www.topcoder.com/thrive/articles/Computational%20Complexity%20part%20two)
-- [ ] [Cheat sheet](http://bigocheatsheet.com/)
-- [ ] [[Review] Big-O notation in 5 minutes (video)](https://youtu.be/__vX2sjlpXU)
+- [x] [Cheat sheet](http://bigocheatsheet.com/)
+- [x] [[Review] Big-O notation in 5 minutes (video)](https://youtu.be/__vX2sjlpXU) `9.1.24`
 
 ```markdown
 Big O notation is a mathematical notation to express how an algorithm scales as the input size grows regardless of the machine. (There are some mathmatical proofs and visualizations with graphs).
