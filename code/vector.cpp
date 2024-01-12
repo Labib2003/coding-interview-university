@@ -1,5 +1,5 @@
-// - [ ] Implement a vector (mutable array with automatic resizing):
-//   - [ ] Practice coding using arrays and pointers, and pointer math to jump
+// - [x] Implement a vector (mutable array with automatic resizing):
+//   - [x] Practice coding using arrays and pointers, and pointer math to jump
 //   to an index instead of using indexing.
 //   - [x] New raw data array with allocated memory
 //     - can allocate int array under the hood, just not use its features
@@ -50,7 +50,7 @@ public:
 
   int at(int idx) {
     if (idx < len)
-      return arr[idx];
+      return *(arr + idx);
     else {
       cout << "Invalid index." << endl;
       return '\0';
@@ -60,7 +60,8 @@ public:
   void push(int val) {
     if (len >= cap)
       resize(2);
-    arr[len++] = val;
+    *(arr + len) = val;
+    len++;
   }
 
   void insert(int idx, int val) {
@@ -73,8 +74,8 @@ public:
       resize(2);
 
     for (int i = len; i >= idx; i--)
-      arr[i + 1] = arr[i];
-    arr[idx] = val;
+      *(arr + i + 1) = *(arr + i);
+    *(arr + idx) = val;
     len++;
   }
 
@@ -85,7 +86,7 @@ public:
       cout << "Underflow: List is empty." << endl;
       return '\0';
     }
-    int val = arr[len - 1];
+    int val = *(arr + len - 1);
     len--;
 
     if (len <= cap / 4)
@@ -101,7 +102,7 @@ public:
     }
 
     for (int i = idx; i < len; i++)
-      arr[i] = arr[i + 1];
+      *(arr + i) = *(arr + i + 1);
     len--;
 
     if (len <= cap / 4)
@@ -110,7 +111,7 @@ public:
 
   void remove(int val) {
     for (int i = 0; i < len;) {
-      if (arr[i] == val)
+      if (*(arr + i) == val)
         del(i);
       else
         i++;
@@ -119,11 +120,13 @@ public:
 
   int find(int val) {
     for (int i = 0; i < len; i++) {
-      if (arr[i] == val)
+      if (*(arr + i) == val)
         return i;
     }
     return -1;
   }
+
+  ~MyVector() { delete[] arr; }
 };
 
 int main() {
