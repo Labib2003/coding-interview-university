@@ -642,7 +642,7 @@ if you can identify the runtime complexity of different algorithms. It's a super
   - [x] Linked List vs Arrays:
     - [Core Linked Lists Vs Arrays (video)](https://www.coursera.org/lecture/data-structures-optimizing-performance/core-linked-lists-vs-arrays-rjBs9)
     - [In The Real World Linked Lists Vs Arrays (video)](https://www.coursera.org/lecture/data-structures-optimizing-performance/in-the-real-world-lists-vs-arrays-QUaUd)
-  - [ ] [Why you should avoid linked lists (video)](https://www.youtube.com/watch?v=YQs6IC-vgmo)
+  - [x] [Why you should avoid linked lists (video)](https://www.youtube.com/watch?v=YQs6IC-vgmo)
   - [x] Gotcha: you need pointer to pointer knowledge:
         (for when you pass a pointer to a function that may change the address where that pointer points)
         This page is just to get a grasp on ptr to ptr. I don't recommend this list traversal style. Readability and maintainability suffer due to cleverness.
@@ -662,7 +662,7 @@ if you can identify the runtime complexity of different algorithms. It's a super
     - [x] value_n_from_end(n) - returns the value of the node at the nth position from the end of the list
     - [x] reverse() - reverses the list
     - [x] remove_value(value) - removes the first item in the list with this value
-  - [ ] Doubly-linked List
+  - [x] Doubly-linked List
     - [Description (video)](https://www.coursera.org/lecture/data-structures/doubly-linked-lists-jpGKD)
     - No need to implement
 
