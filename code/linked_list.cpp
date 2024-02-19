@@ -1,4 +1,4 @@
-// - [ ] Singly Linked List:
+// - [x] Singly Linked List:
 //   - [x] size() - returns the number of data elements in the list
 //   - [x] empty() - bool returns true if empty
 //   - [x] value_at(index) - returns the value of the nth item (starting at 0
@@ -26,13 +26,13 @@ template <typename T> struct Node {
   Node<T> *next;
 };
 
-template <typename T> class LinkedList {
+template <typename T> class RingBuffer {
 private:
   int length;
   Node<T> *head, *tail;
 
 public:
-  LinkedList() {
+  RingBuffer() {
     length = 0;
     head = tail = nullptr;
   }
@@ -70,7 +70,7 @@ public:
     length++;
   }
 
-  T pop_front() {
+  T dequeue() {
     if (length <= 0) {
       cout << "Underflow Condition: Cannot pop from an empty list." << endl;
       return T();
@@ -87,7 +87,7 @@ public:
     return data;
   }
 
-  void push_back(T val) {
+  void enqueue(T val) {
     Node<T> *newNode = new Node<T>();
 
     newNode->data = val;
@@ -137,7 +137,7 @@ public:
       return;
     }
     if (idx == length - 1) {
-      push_back(val);
+      enqueue(val);
       return;
     }
 
@@ -167,7 +167,7 @@ public:
     }
 
     if (idx == 0) {
-      return pop_front();
+      return dequeue();
     }
     if (idx == length - 1) {
       return pop_back();
@@ -221,7 +221,7 @@ public:
 };
 
 int main() {
-  LinkedList<int> list;
+  RingBuffer<int> list;
 
   list.push_front(1);
   list.push_front(2);
@@ -229,13 +229,13 @@ int main() {
   list.push_front(4);
   list.push_front(5);
 
-  list.push_back(10);
-  list.push_back(20);
-  list.push_back(30);
-  list.push_back(40);
-  list.push_back(50);
+  list.enqueue(10);
+  list.enqueue(20);
+  list.enqueue(30);
+  list.enqueue(40);
+  list.enqueue(50);
 
-  cout << "Popped front: " << list.pop_front() << endl;
+  cout << "Popped front: " << list.dequeue() << endl;
   cout << "Popped back: " << list.pop_back() << endl;
   cout << "Head: " << list.front() << endl;
   cout << "Tail: " << list.back() << endl;
