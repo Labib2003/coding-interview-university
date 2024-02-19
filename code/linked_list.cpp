@@ -195,8 +195,7 @@ public:
   }
 
   void reverse() {
-    Node<T> *current = head;
-    Node<T> *prev = tail, *next = nullptr;
+    Node<T> *current = head, *prev = tail, *next = nullptr;
 
     for (int i = 0; i < length; i++) {
       next = current->next;
@@ -204,8 +203,9 @@ public:
       prev = current;
       current = next;
     }
+
     Node<T> *temp = head;
-    head = prev;
+    head = tail;
     tail = temp;
   }
 
