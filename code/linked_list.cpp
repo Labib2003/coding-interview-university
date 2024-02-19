@@ -58,6 +58,7 @@ public:
     Node<T> *newNode = new Node<T>();
 
     newNode->data = val;
+    newNode->next = nullptr;
 
     if (length == 0)
       head = tail = newNode;
@@ -90,6 +91,7 @@ public:
     Node<T> *newNode = new Node<T>();
 
     newNode->data = val;
+    newNode->next = nullptr;
 
     if (length == 0)
       head = tail = newNode;
@@ -143,6 +145,7 @@ public:
     Node<T> *temp = head;
 
     newNode->data = val;
+    newNode->next = nullptr;
 
     for (int i = 0; i < idx - 1; i++)
       temp = temp->next;
@@ -192,16 +195,18 @@ public:
   }
 
   void reverse() {
-    LinkedList<T> tempList;
+    Node<T> *current = head;
+    Node<T> *prev = tail, *next = nullptr;
 
-    while (length > 0) {
-      T temp = pop_front();
-      tempList.push_front(temp);
+    for (int i = 0; i < length; i++) {
+      next = current->next;
+      current->next = prev;
+      prev = current;
+      current = next;
     }
-
-    head = tempList.head;
-    tail = tempList.tail;
-    length = tempList.length;
+    Node<T> *temp = head;
+    head = prev;
+    tail = temp;
   }
 
   T remove_value(T val) {
